@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators and Expressions</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        pre{
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <h1>Operators and Expressions</h1>
+    <pre>
+    
+Q1. Add two Numbers
+
+You are provided with two numbers A and B. Your task is to add these two numbers.
+
+A1. const AddTwoNumbers = (a,b) => {
+    return a+b;
+};
+
+Q2. Find if the conditions are obeyed or not?
+
+You are given two number first as A and second as B and check if both conditions (A<10 and A>B) are satisfied or not with the help of operators.
+
+A2. const Is_Valid = (a,b) => {
+    if(a < 10 && a > b){
+      return "true";
+    } else{
+      return "false";
+    }
+  };
+
+Q3. Check the conditons
+
+You are given two numbers A and B. You need to do the following checks:
+if both are divisible by 10 console true.
+if both are not divisible by 10 console false.
+if one of them only is divisible by 10 console true.
+Use operator to do this.
+
+A3. const Check = (A, B) => 
+{
+  if (A%10===0 && B%10===0){
+    return "true";
+  } 
+  else if (A%10!==0 && B%10!==0){
+    return "false";
+  } 
+  else {
+    return "true";
+  }
+};
+
+Q4. Find the first digit of a 4 digit number
+
+You are provided a four digit number N only. Your task is to print out the first digit of that number.
+
+A4. const First_Digit = (n) => {
+    return parseInt(n/1000);
+  };
+
+Q5. Find the last digit of a 4 digit number
+
+You are provided a four digit number N only. Your task is to print out the last digit of that number.
+
+A5. const Last_Digit = (n) => {
+    const result = String(n).charAt(3);
+    return result;
+ };
+
+Q6. Find the remainder
+
+You are provided with two numbers A and B where A as  divisor and B as  dividend.Your task is find the remainder.
+
+A6. const Find_the_remainder = (a,b) => {
+    const c = b%a;
+    return c;
+ };
+
+Q7. Multipy two Numbers
+
+You are provided with two numbers A and B. Your task is to multiply these two numbers.
+
+A7. const Multiply_two_number = (a,b) => {
+    const result = a*b;
+    return result;
+  };
+
+Q8. Marks Calculator
+
+Shyam has got his marks in three subjects as A, B, and C (out of 100).Write a program to calculate his total marks and his average.
+
+A8. const Sum = (A, B, C) => 
+{
+ const sum = A+B+C;
+ return sum;
+};
+
+const Average = (A, B, C) => 
+{
+ const average = (A+B+C)/3;
+ return average;
+};
+
+     </pre>
+</body>
+</html>
