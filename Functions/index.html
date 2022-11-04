@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <style>
+        *{
+            background: linear-gradient(rgb(189, 251, 189),rgb(246, 166, 166));
+        }
+        body{
+            background-color: darkcyan;
+            font-family: 'Poppins', sans-serif;
+        }
+        h1{
+            text-align: center;
+        }
+        pre{
+            font-size: large;
+        }
+        h2{
+            color: rgb(16, 67, 115);
+        }
+        h4{
+            color: rgb(116, 12, 101);
+        }
+    </style>
+</head>
+<body>
+<h1>Functions</h1>
+
+<h2>Create one function with zero parameter having a console statement.</h2>
+<h4><pre>Ans. function dummy(){
+            console.log("Hello")
+            }
+            dummy();
+        </pre></h4>
+
+<h2>Create one function which takes two values as a parameter and print the sum of them as "Sum of 3, 4 is 7".</h2>
+<h4><pre>Ans. function dummy(a,b){
+            const sum = a + b
+            console.log("Sum of " + a + " and " + b + " is " + sum)
+            }
+            dummy(3,4);
+        </pre></h4>
+
+<h2>Create one arrow function.</h2>
+<h4><pre>Ans. let myFunction = (a, b) => a * b;
+            console.log(myFunction(3,4));
+            </pre></h4>
+
+<h2>Print output:<pre> 
+            var x = 21;
+            var girl = function () {
+                console.log(x);
+                var x = 20;
+            };
+            girl ();
+        </pre></h2>
+<h4>Ans. undefined</h4>
+
+<h2>Print output:<pre> 
+            var x = 21;
+            girl ();
+            console.log(x)
+            function girl() {
+                console.log(x);
+                var x = 20;
+            };
+    </pre></h2>
+<h4>Ans. undefined
+    21</h4>
+
+<h2>Print output<pre>
+            var x = 21;
+            a();
+            b();
+
+            function a() {
+                
+            x = 20;
+            console.log(x);
+            };
+            function b() {
+                
+                x = 40;
+            console.log(x);
+            };
+        </pre></h2>
+<h4>Ans. 20
+    40</h4>
+
+<h2>Write a function that accepts parameter n and returns factorial of n.</h2>
+<h4><pre>Ans. function factorial(n) {
+            if (n == 0) return 1;
+            return n * factorial(n - 1);
+            }
+        
+            console.log(factorial(4));
+        </pre></h4>
+
+
+</body>
+</html>
