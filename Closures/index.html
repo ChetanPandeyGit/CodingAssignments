@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <style>
+        * {
+            background: linear-gradient(rgb(189, 251, 189), rgb(246, 166, 166));
+        }
+
+        body {
+            background-color: darkcyan;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        pre {
+            font-size: large;
+        }
+
+        h2 {
+            color: rgb(16, 67, 115);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Closures</h1>
+    
+    <h2>Q1. Print Output</h2> 
+    <pre>
+        function counter(){
+            var counter = 0;
+        
+            function IncreaseCounter() {
+                return counter += 1;
+            };
+        
+            return IncreaseCounter;
+        }        
+        var counter = counter();
+        alert(counter());
+        alert(counter());
+        alert(counter());
+        alert(counter());
+    </pre>
+    <h5>Ans. This code will produce 1, 2, 3, 4 as alerts respectively.</h5>
+    <br><br>
+
+    <h2>Q2. Print Output</h2>     
+    <pre>
+        let count = 0;
+        (function () {
+        if (count === 0) {
+            let count = 1;
+            console.log(count); // What is logged?
+        }
+        console.log(count); // What is logged?
+        })();
+    </pre>
+    <h5>Ans. This code will produce 1, 0 as console output.</h5>
+    <br><br>
+   
+    <h2>Q3. Print Output</h2> 
+    <pre>
+        for (var i = 0; i < 3; i++) {
+            setTimeout(function log() {
+              console.log(i); // What is logged?
+            }, 1000);
+          }
+    </pre>
+    <h5>Ans. This code will produce 3, 3, 3 as console output.</h5>
+    <br><br>
+    
+    <h2>Q4. Write a code to calculate area of a rectangle using inner function. In this case outer function should accept parameter length and inner function should accept parameter breadth.</h2>
+    <pre>Ans. function outerFunction(length){
+            function innerFunction(breadth){
+                let areaRect = length * breadth;
+                console.log(areaRect);
+            }
+            innerFunction(15);
+        }
+        outerFunction(20);
+    </pre>
+    <br><br>
+  
+    <h2>Q5.Take a variable in outer function and create an inner function to increase the counter every time it is called.</h2>
+    <pre>Ans. function outerFunction(){
+        let variable = 0;
+        function innerFunction(){
+           return variable++;
+        }
+        return innerFunction;
+    }
+    let result = outerFunction(); 
+    console.log(result());</pre>
+    <br><br>
+   
+    
+    <h2>Q6. Print Output</h2> 
+    <pre>
+        var a = 12;
+        (function () {
+        alert(a);
+        })();
+    </pre>
+    <h5>Ans. This code will produce 12 as alert.</h5>
+    <br><br>
+   
+    <h2>Q7. Print Output</h2> 
+    <pre>
+        var a = 10;
+        var x = (function () {
+        var a = 12;
+        return function () {
+            alert(a);
+        };
+        })();
+        x();
+    </pre>
+    <h5>Ans. This code will produce 12 as alert.</h5>
+    <br><br>
+    
+    <h2>Q8. Print Output</h2> 
+    <pre>
+        var globalVar = "xyz";
+
+        (function outerFunc(outerArg) {
+        var outerVar = 'a';
+        
+            (function innerFunc(innerArg) {
+            var innerVar = 'b';
+            
+            console.log(
+            "outerArg = " + outerArg + "\n" +
+            "innerArg = " + innerArg + "\n" +
+            "outerVar = " + outerVar + "\n" +
+            "innerVar = " + innerVar + "\n" +
+            "globalVar = " + globalVar);
+    
+            })(456);
+        })(123);
+    </pre>
+    <h5>Ans. Let`s assume continuous double quotes are unintentional, then output is: <br>
+                outerArg = 123 <br>
+                innerArg = 456 <br>
+                outerVar = a <br>
+                innerVar = b <br>
+                globalVar = xyz</h5>
+    <script src="script.js"></script>
+   </body>
+</html>
